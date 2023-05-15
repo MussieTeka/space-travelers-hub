@@ -17,7 +17,7 @@ nav {
       width: 70px;
     }
 
-    h1 {
+    .logo-text {
       font-size: 24px;
       color: $secondary-color;
     }
@@ -45,6 +45,11 @@ nav {
 nav ul a {
   color: $primary-color;
   font-weight: 600;
+  text-decoration: none;
+}
+
+nav ul a[class='active'] {
+  text-decoration: underline;
 }
 
 .horizontal {
@@ -53,4 +58,8 @@ nav ul a {
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.active {
+  color: $primary-color;
 }
