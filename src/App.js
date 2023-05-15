@@ -1,0 +1,11 @@
+import React from 'react';
+
+function App() {
+  return (
+    <>
+      The Space Traveler Hub
+    </>
+  );
+}
+
+export default App;
