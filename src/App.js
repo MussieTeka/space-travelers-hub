@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
 import Rocket from './pages/Rocket';
 
-
 function App() {
   return (
     <Router>
