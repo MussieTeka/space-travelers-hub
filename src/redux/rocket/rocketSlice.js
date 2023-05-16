@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   rocket: [],
@@ -15,9 +15,9 @@ export const fetchRockets = createAsyncThunk('rocket/fetchRockets', async () => 
       name: rocket.name,
       description: rocket.description,
       image: rocket.flickr_images[0],
-    }))
+    }));
     return rocketData;
-  } catch(error) {
+  } catch (error) {
     return error;
   }
 });
@@ -38,7 +38,7 @@ const rocketSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-  }
+  },
 });
 
 export default rocketSlice.reducer;

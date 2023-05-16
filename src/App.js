@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
 import Rocket from './pages/Rocket';
@@ -17,7 +17,7 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchRockets())
+    dispatch(fetchRockets());
   }, [dispatch]);
 
   return (
