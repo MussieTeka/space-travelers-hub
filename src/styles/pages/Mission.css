@@ -23,10 +23,10 @@
   background-color: #f9f9f9;
 }
 
-.mission-table tr:last-child td {
-  border-bottom: none;
-}
-
 .mission-table td:last-child {
   border-right: none;
+}
+
+.mission-table tr:last-child td {
+  border-bottom: none;
 }
