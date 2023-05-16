@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import planet from '../assets/planet.png';
-import styles from '../styles/Navbar.module.scss';
+import styles from '../styles/components/Navbar.module.scss';
 
 const Navbar = () => (
   <div>
