@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import RocketItem from '../components/RocketItem';
 
 const Rocket = () => {
   const rocket = useSelector((state) => state.rockets);
@@ -9,10 +10,7 @@ const Rocket = () => {
       {rocket.isLoading ? (
         <h3 style={{ textAlign: 'center' }}>Loading...</h3>
       ) : (
-        <div>
-          <h2>Rocket Setup</h2>
-          <p>This is the rocket setup.</p>
-        </div>
+        <RocketItem />
       )}
     </div>
   );
