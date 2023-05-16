@@ -1,0 +1,32 @@
+$blue: #0290ff;
+
+.container {
+  display: flex;
+  gap: 50px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 300px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.notReserved {
+  color: white;
+  border: none;
+  background-color: $blue;
+  padding: 6px 8px;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.notReserved:hover {
+  outline: 1px solid $blue;
+  background-color: white;
+  color: black;
+}
