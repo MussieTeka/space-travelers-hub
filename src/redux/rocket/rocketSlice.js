@@ -7,20 +7,23 @@ const initialState = {
   error: '',
 };
 
-export const fetchRockets = createAsyncThunk('rocket/fetchRockets', async () => {
-  try {
-    const response = await axios.get('https://api.spacexdata.com/v4/rockets');
-    const rocketData = response.data.map((rocket) => ({
-      id: rocket.id,
-      name: rocket.name,
-      description: rocket.description,
-      image: rocket.flickr_images[0],
-    }));
-    return rocketData;
-  } catch (error) {
-    return error;
-  }
-});
+export const fetchRockets = createAsyncThunk(
+  'rocket/fetchRockets',
+  async () => {
+    try {
+      const response = await axios.get('https://api.spacexdata.com/v4/rockets');
+      const rocketData = response.data.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.name,
+        description: rocket.description,
+        image: rocket.flickr_images[0],
+      }));
+      return rocketData;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 
 const rocketSlice = createSlice({
   name: 'rocket',
