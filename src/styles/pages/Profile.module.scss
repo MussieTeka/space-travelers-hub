@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tableContainer {
+  width: 300px;
+}
+
+.tableHeader {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.table th {
+  background-color: #f0f0f0;
+}
+
+p {
+  text-align: left;
+}
