@@ -1,0 +1,10 @@
+.active-member-button {
+  background-color: rgb(0, 168, 188);
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 120px;
+  border-radius: 5px;
+}
