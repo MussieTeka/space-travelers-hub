@@ -1,10 +1,10 @@
-.mission-action-button {
+.mission-join-button {
   background-color: transparent;
   color: rgb(108, 117, 126);
   border: 1px solid rgb(108, 117, 126);
   padding: 5px;
   cursor: pointer;
   font-size: 13px;
-  width: 100px;
+  width: 110px;
   border-radius: 5px;
 }
