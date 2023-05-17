@@ -16,6 +16,16 @@ button {
   font-family: inherit;
 }
 
+.reserved {
+  outline: 1px solid #b1a8a8;
+  border: none;
+  background-color: white;
+  padding: 6px 8px;
+  border-radius: 2px;
+  color: #b1a8a8;
+  transition: all 0.15s;
+}
+
 .notReserved {
   color: white;
   border: none;
@@ -25,8 +35,26 @@ button {
   transition: all 0.15s;
 }
 
+.reserved:hover {
+  color: rgb(238, 49, 49);
+}
+
 .notReserved:hover {
   outline: 1px solid $blue;
   background-color: white;
   color: black;
 }
+
+.loading {
+  width: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68vh;
+  background: radial-gradient(circle closest-side, #0290ff 90%, #0000) 0 0/33% 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: d1 1s steps(4) infinite;
+}
+
+@keyframes d1 { to { clip-path: inset(0 -34% 0 0); } }
