@@ -16,6 +16,15 @@ button {
   font-family: inherit;
 }
 
+.reservedBadge {
+  color: white;
+  padding: 1px 4px;
+  font-size: 12px;
+  background-color: #5fa4d8;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
 .reserved {
   outline: 1px solid #b1a8a8;
   border: none;

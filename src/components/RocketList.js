@@ -27,7 +27,14 @@ const RocketList = ({
       </div>
       <div className={styles.infoHolder}>
         <h3 style={{ paddingBottom: '10px' }}>{name}</h3>
-        <p style={{ paddingBottom: '10px' }}>{description}</p>
+        {isReserved
+          ? (
+            <p style={{ paddingBottom: '10px' }}>
+              <span className={styles.reservedBadge}>Reserved</span>
+              {description}
+            </p>
+          )
+          : <p style={{ paddingBottom: '10px' }}>{description}</p>}
         <button
           type="button"
           onClick={handleReserve}
