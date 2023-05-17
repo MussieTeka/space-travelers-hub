@@ -12,7 +12,7 @@ const MissionAction = ({ missionId }) => {
   };
 
   return (
-    <button type="button" className="mission-action-button" onClick={handleJoinMission}>
+    <button type="button" className="mission-join-button" onClick={handleJoinMission}>
       Join Mission
     </button>
   );
