@@ -46,15 +46,15 @@ const rocketSlice = createSlice({
       const { id } = action.payload;
       const updatedRockets = state.rocket.map((rocket) => {
         if (rocket.id === id) {
-          return {...rocket, reserve: false};
+          return { ...rocket, reserve: false };
         }
-        return rocket
-      })
+        return rocket;
+      });
       return {
         ...state,
         rocket: updatedRockets,
-      }
-    }
+      };
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.pending, (state) => {

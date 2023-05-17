@@ -5,7 +5,7 @@ import styles from '../styles/components/Rocket.module.scss';
 import { reserveRocket, cancelReserve } from '../redux/rocket/rocketSlice';
 
 const RocketList = ({
-  id, name, image, description, reserved
+  id, name, image, description, reserved,
 }) => {
   const dispatch = useDispatch();
   const [isReserved, setIsReserved] = useState(reserved);
@@ -45,6 +45,11 @@ RocketList.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
+};
+
+RocketList.defaultProps = {
+  reserved: false,
 };
 
 export default RocketList;
