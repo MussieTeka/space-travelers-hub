@@ -12,7 +12,9 @@ const MissionLeaveAction = ({ missionId }) => {
   };
 
   return (
-    <button type="button" className="mission-leave-button" onClick={handleLeaveMission}>Leave Mission</button>
+    <button type="button" className="mission-leave-button" onClick={handleLeaveMission}>
+      Leave Mission
+    </button>
   );
 };
 
