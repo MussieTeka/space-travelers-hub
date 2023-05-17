@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from '../styles/components/Rocket.module.scss';
-import { reserveRocket } from '../redux/rocket/rocketSlice';
+import { reserveRocket, cancelReserve } from '../redux/rocket/rocketSlice';
 
 const RocketList = ({
-  id, name, image, description,
+  id, name, image, description, reserved,
 }) => {
   const dispatch = useDispatch();
+  const [isReserved, setIsReserved] = useState(reserved);
 
   const handleReserve = () => {
-    dispatch(reserveRocket({ id }));
+    if (isReserved) {
+      dispatch(cancelReserve({ id }));
+      setIsReserved(false);
+    } else {
+      dispatch(reserveRocket({ id }));
+      setIsReserved(true);
+    }
   };
 
   return (
@@ -23,10 +30,10 @@ const RocketList = ({
         <p style={{ paddingBottom: '10px' }}>{description}</p>
         <button
           type="button"
-          className={styles.notReserved}
           onClick={handleReserve}
+          className={isReserved ? styles.reserved : styles.notReserved}
         >
-          Reserve Rocket
+          {isReserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
       </div>
     </div>
@@ -38,6 +45,11 @@ RocketList.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
+};
+
+RocketList.defaultProps = {
+  reserved: false,
 };
 
 export default RocketList;
