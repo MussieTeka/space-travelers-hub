@@ -1,0 +1,69 @@
+$blue: #0290ff;
+
+.container {
+  display: flex;
+  gap: 50px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 300px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.reservedBadge {
+  color: white;
+  padding: 1px 4px;
+  font-size: 12px;
+  background-color: #5fa4d8;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.reserved {
+  outline: 1px solid #b1a8a8;
+  border: none;
+  background-color: white;
+  padding: 6px 8px;
+  border-radius: 2px;
+  color: #b1a8a8;
+  transition: all 0.15s;
+}
+
+.notReserved {
+  color: white;
+  border: none;
+  background-color: $blue;
+  padding: 6px 8px;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.reserved:hover {
+  color: rgb(238, 49, 49);
+}
+
+.notReserved:hover {
+  outline: 1px solid $blue;
+  background-color: white;
+  color: black;
+}
+
+.loading {
+  width: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68vh;
+  background: radial-gradient(circle closest-side, #0290ff 90%, #0000) 0 0/33% 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: d1 1s steps(4) infinite;
+}
+
+@keyframes d1 { to { clip-path: inset(0 -34% 0 0); } }

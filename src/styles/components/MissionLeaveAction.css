@@ -1,0 +1,10 @@
+.mission-leave-button {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 110px;
+  border-radius: 5px;
+}
