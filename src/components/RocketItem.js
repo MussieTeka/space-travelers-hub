@@ -14,7 +14,7 @@ const RocketItem = () => {
           name={rocket.name}
           image={rocket.image}
           description={rocket.description}
-          reserved={rocket.reserved || false}
+          reserved={rocket.reserve || false}
         />
       ))}
     </div>
