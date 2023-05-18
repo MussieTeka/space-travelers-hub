@@ -21,7 +21,7 @@ const RocketList = ({
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="rocket-list">
       <div className={styles.imgContainer}>
         <img src={image} alt={name} />
       </div>
