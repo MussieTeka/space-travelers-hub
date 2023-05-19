@@ -75,7 +75,7 @@
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-- A live demo link would be up soon. 
+- Click [here](https://skabeo-space.onrender.com/) to view the live Demo. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
